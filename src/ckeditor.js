@@ -33,7 +33,7 @@ import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily.js';
 import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight.js';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment.js';
 
-class Editor extends ClassicEditor {}
+class Editor extends ClassicEditor { }
 
 // Plugins to include in the build.
 Editor.builtinPlugins = [
@@ -69,7 +69,6 @@ Editor.builtinPlugins = [
 ];
 
 Editor.defaultConfig = {
-
 	toolbar: {
 		items: [
 			'heading',
@@ -243,9 +242,20 @@ Editor.defaultConfig = {
 			}
 		],
 	},
+	link: {
+		decorators: {
+			isExternal: {
+				mode: 'manual',
+				label: 'Open in a new tab',
+				attributes: {
+					target: '_blank'
+				}
+			}
+		}
+	},
 	mediaEmbed: {
-        previewsInData: true
-    },
+		previewsInData: true
+	},
 	licenseKey: '',
 };
 
