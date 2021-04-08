@@ -30,6 +30,7 @@ import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolo
 import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor.js';
 import FontSize from '@ckeditor/ckeditor5-font/src/fontsize.js';
 import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily.js';
+import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight.js';
 
 class Editor extends ClassicEditor {}
 
@@ -61,7 +62,8 @@ Editor.builtinPlugins = [
 	FontBackgroundColor,
 	FontColor,
 	FontSize,
-	FontFamily
+	FontFamily,
+	Highlight
 ];
 
 Editor.defaultConfig = {
@@ -80,6 +82,7 @@ Editor.defaultConfig = {
 			'fontSize',
 			'fontColor',
 			'fontBackgroundColor',
+			'highlight',
 			'|',
 			'outdent',
 			'indent',
@@ -107,6 +110,139 @@ Editor.defaultConfig = {
 			'mergeTableCells'
 		]
 	},
+	fontColor: {
+		colors: [
+			{
+				color: 'hsl(0, 0%, 0%)',
+				label: 'Black'
+			},
+			{
+				color: 'hsl(0, 0%, 30%)',
+				label: 'Dim grey'
+			},
+			{
+				color: 'hsl(0, 0%, 60%)',
+				label: 'Grey'
+			},
+			{
+				color: 'hsl(0, 0%, 90%)',
+				label: 'Light grey'
+			},
+			{
+				color: 'hsl(0, 0%, 100%)',
+				label: 'White',
+				hasBorder: true
+			},
+			{
+				color: '#ff615e',
+				label: 'Red'
+			},
+			{
+				color: 'hsl(30, 75%, 60%)',
+				label: 'Orange'
+			},
+			{
+				color: 'hsl(60, 75%, 60%)',
+				label: 'Yellow'
+			},
+			{
+				color: 'hsl(201, 31%, 51%)',
+				label: 'Light green'
+			},
+			{
+				color: 'hsl(138, 64%, 39%)',
+				label: 'Green'
+			},
+			{
+				color: 'hsl(150, 75%, 60%)',
+				label: 'Aquamarine'
+			},
+			{
+				color: 'hsl(180, 75%, 60%)',
+				label: 'Turquoise'
+			},
+			{
+				color: 'hsl(201, 95%, 56%)',
+				label: 'Light blue'
+			},
+			{
+				color: 'hsl(224, 65%, 36%)',
+				label: 'Blue'
+			},
+			{
+				color: 'hsl(270, 75%, 60%)',
+				label: 'Purple'
+			}
+		],
+	},
+	fontBackgroundColor: {
+		colors: [
+			{
+				color: 'hsl(0, 0%, 0%)',
+				label: 'Black'
+			},
+			{
+				color: 'hsl(0, 0%, 30%)',
+				label: 'Dim grey'
+			},
+			{
+				color: 'hsl(0, 0%, 60%)',
+				label: 'Grey'
+			},
+			{
+				color: 'hsl(0, 0%, 90%)',
+				label: 'Light grey'
+			},
+			{
+				color: 'hsl(0, 0%, 100%)',
+				label: 'White',
+				hasBorder: true
+			},
+			{
+				color: 'hsl(0, 75%, 60%)',
+				label: 'Red'
+			},
+			{
+				color: 'hsl(30, 75%, 60%)',
+				label: 'Orange'
+			},
+			{
+				color: 'hsl(60, 75%, 60%)',
+				label: 'Yellow'
+			},
+			{
+				color: 'hsl(201, 31%, 51%)',
+				label: 'Light green'
+			},
+			{
+				color: 'hsl(138, 64%, 39%)',
+				label: 'Green'
+			},
+			{
+				color: 'hsl(150, 75%, 60%)',
+				label: 'Aquamarine'
+			},
+			{
+				color: 'hsl(180, 75%, 60%)',
+				label: 'Turquoise'
+			},
+			{
+				color: 'hsl(201, 95%, 56%)',
+				label: 'Light blue'
+			},
+			{
+				color: 'hsl(224, 65%, 36%)',
+				label: 'Blue'
+			},
+			{
+				color: 'hsl(270, 75%, 60%)',
+				label: 'Purple'
+			}
+		],
+	},
+	mediaEmbed: {
+        previewsInData: true
+    },
 	licenseKey: '',
 };
 
