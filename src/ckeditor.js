@@ -33,6 +33,7 @@ import FontSize from '@ckeditor/ckeditor5-font/src/fontsize.js';
 import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily.js';
 import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight.js';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment.js';
+import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
 
 class Editor extends ClassicEditor { }
 
@@ -67,7 +68,8 @@ Editor.builtinPlugins = [
 	FontSize,
 	FontFamily,
 	Highlight,
-	Alignment
+	Alignment,
+	RemoveFormat
 ];
 
 Editor.defaultConfig = {
@@ -96,7 +98,9 @@ Editor.defaultConfig = {
 			'insertTable',
 			'mediaEmbed',
 			'undo',
-			'redo'
+			'redo',
+			'|',
+			'removeFormat'
 		]
 	},
 	language: 'en',

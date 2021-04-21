@@ -31,6 +31,7 @@
     "@ckeditor/ckeditor5-font": "^27.0.0",
     "@ckeditor/ckeditor5-highlight": "^27.0.0",
     "@ckeditor/ckeditor5-alignment": "^27.0.0",
+    "@ckeditor/ckeditor5-remove-format": "^27.0.0",
     "css-loader": "^5.2.0",
     "postcss": "^8.2.8",
     "postcss-loader": "^4.2.0",
@@ -44,7 +45,6 @@
     "build": "webpack --mode production",
     "start": "npx http-server -o ./sample -s -c-1"
   },
-  "dependencies": {
-    
+  "dependencies": {    
   }
 }
