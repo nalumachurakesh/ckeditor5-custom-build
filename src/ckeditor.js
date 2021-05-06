@@ -260,7 +260,13 @@ Editor.defaultConfig = {
 		}
 	},
 	mediaEmbed: {
-		previewsInData: true
+		previewsInData: true,
+		extraProviders: [
+			{
+				name: 'allow-all',
+				url: /^.+/
+			}
+		]
 	},
 	licenseKey: '',
 };
